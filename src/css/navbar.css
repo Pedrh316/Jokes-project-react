@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.navbar{
+    font-family:'Roboto', sans-serif;
+    background-color:cornsilk;
+    padding:.5rem 2rem;
+    font-size:.8rem;
+}
+
+.navbar *{
+    margin:0;
+}
+
+.navbar .logo{
+    font-size:1.5rem;
+}
+
+.navbar__list{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.jokes-dropper{
+    position: relative;
+}
+
+.jokes-dropper:hover .jokes-dropdown{
+    display:block;
+}
+
+.jokes-dropper h3{
+    padding:1rem;
+    background-color:rgb(255, 225, 143);
+    border-radius:5px;
+}
+
+.jokes-dropper li .joke{
+    background-color: #fff;
+}
+
+.jokes-dropper .setup{
+    font-size:.9rem;
+}
+
+.jokes-dropper .joke .punchline{
+    margin-top:1rem;
+    font-size:.75rem;
+}
+
+.jokes-dropdown{
+    display:none;
+    position: absolute;
+    right:0;
+    max-height:60vh;
+    scrollbar-width:thin;
+    overflow:auto;    
+    width:200px;
+}

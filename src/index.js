@@ -1,17 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import Joke from './Joke';
+import Navbar from './Navbar';
+import './css/style.css';
+import './css/Jokes.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function Jokes(){
+    return (
+        <div>
+            <Navbar/>
+            <section className="jokes">
+                <Joke setup="Qual é o único continente que tem problemas no estômago?" punchline="ásia"/>
+                <Joke setup="Qual é a tecla favorita do astronalta?" punchline="espaço"/>
+                <Joke setup="O que o motorista disse quando parou o ônibus?" punchline="a que ponto chegamos?"/>
+                <Joke setup="Qual é o contrário de volatil?" punchline="vem cá sobrinho"/>
+                <Joke setup="Por que a idosa não tem relógio?" punchline="por que ela é senhora"/>
+            </section>
+        </div>
+    )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<Jokes/>, document.getElementById('root'));
